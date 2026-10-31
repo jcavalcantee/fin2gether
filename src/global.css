@@ -1,9 +1,53 @@
 :root {
   --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Manrope, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol, Noto Color Emoji;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
   --font-serif: Georgia, 'Times New Roman', serif;
+
+  /* Fin2Gether — identidade visual (assets/fin2gether-identidade-visual.md) */
+
+  /* Base */
+  --color-bg: #f3f6f1;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f9fbf8;
+  --color-text: #13261c;
+  --color-text-muted: #5b6b61;
+  --color-text-control: #3f4f45;
+
+  /* Marca */
+  --color-primary: #1e6b47;
+  --color-primary-dark: #0f3b28;
+  --color-accent: #b9e07a;
+  --color-primary-soft: #d7eedd;
+  --color-primary-softer: #eef7f0;
+  --color-accent-soft: #e9f5cf;
+
+  /* Linhas e controles */
+  --color-border: #e2e8e1;
+  --color-border-input: #d5ded3;
+  --color-track: #eaf0e8;
+  --color-segmented-bg: #e4ebe2;
+  --color-radio-off: #b8c4b9;
+  --color-border-dashed: #9fb3a3;
+
+  /* Status e alertas */
+  --color-warning: #c2410c;
+  --color-warning-bg: #fdecd8;
+  --color-warning-text: #9a3412;
+  --color-warning-strong: #7c2d12;
+  --color-danger-bg: #fbd5d0;
+  --color-danger-text: #991b1b;
+
+  /* Transparências (sobre --color-primary-dark) */
+  --color-on-primary-dark-secondary-text: rgba(255, 255, 255, 0.8);
+  --color-on-primary-dark-card: rgba(255, 255, 255, 0.08);
+  --color-on-primary-dark-track: rgba(255, 255, 255, 0.14);
+  --color-on-primary-dark-border: rgba(255, 255, 255, 0.3);
+  --color-accent-badge-bg: rgba(185, 224, 122, 0.16);
+
+  /* Sombras */
+  --shadow-fab: 0 6px 16px rgba(15, 59, 40, 0.3);
 }

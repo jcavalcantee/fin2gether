@@ -8,12 +8,15 @@ import {
 } from "@expo-google-fonts/manrope";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
+import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
+
+import { Colors } from "@/constants/colors";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [fontsLoaded] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     Manrope_400Regular,
     Manrope_500Medium,
     Manrope_600SemiBold,
@@ -21,15 +24,26 @@ export default function RootLayout() {
     Manrope_800ExtraBold,
   });
 
+  const isReady = fontsLoaded || fontError;
+
   useEffect(() => {
-    if (fontsLoaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
+    if (isReady) SplashScreen.hideAsync();
+  }, [isReady]);
 
-  if (!fontsLoaded) {
-    return null;
-  }
+  if (!isReady) return null;
 
-  return <Stack />;
+  return (
+    <>
+      <StatusBar style="dark" />
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: Colors.bg },
+        }}
+      >
+        <Stack.Screen name="index" options={{ animation: "none" }} />
+        <Stack.Screen name="signin" options={{ animation: "fade" }} />
+      </Stack>
+    </>
+  );
 }

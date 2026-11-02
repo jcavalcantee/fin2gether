@@ -201,7 +201,7 @@ export default function Index() {
           {currentStep === 1 && (
             <Text style={styles.footerText}>
               Já tem uma conta?{" "}
-              <Link href={"/sign-in" as never} style={styles.link}>Entrar</Link>
+              <Link href={"/signin" as never} style={styles.link}>Entrar</Link>
             </Text>
           )}
         </View>

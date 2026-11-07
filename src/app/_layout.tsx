@@ -43,6 +43,7 @@ export default function RootLayout() {
       >
         <Stack.Screen name="index" options={{ animation: "none" }} />
         <Stack.Screen name="signin" options={{ animation: "fade" }} />
+        <Stack.Screen name="home" options={{ animation: "fade" }} />
       </Stack>
     </>
   );

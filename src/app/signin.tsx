@@ -40,7 +40,7 @@ export default function SignIn() {
 
     try {
       console.log("payload do login:", JSON.stringify(payload, null, 2));
-      router.replace("/" as never); // troque pela rota da tela inicial do app
+      router.replace("/home" as never); // troque pela rota da tela inicial do app
     } finally {
       setIsSubmitting(false);
     }

@@ -1,8 +1,11 @@
 import { ScrollView, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { NavBar } from "@/components/nav-bar";
+import { SpentList } from "@/components/spent-list";
 import { SummaryCard } from "@/components/summary-card";
 import { UserHeader } from "@/components/user-header";
+import { MOCK_CATEGORY_SPENDING } from "@/mocks/category-spending";
 
 import { Colors } from "@/constants/colors";
 
@@ -25,7 +28,11 @@ export default function Home() {
                     userTotalSpent={"R$ 2.324,42"} 
                     userPartnerTotalSpent={"R$ 4.517,88"}
                 />
+
+                <SpentList data={MOCK_CATEGORY_SPENDING}                    
+                />
             </ScrollView>
+            <NavBar/>
         </SafeAreaView>
     )
 }

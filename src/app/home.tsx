@@ -1,6 +1,7 @@
 import { ScrollView, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { NavBar } from "@/components/nav-bar";
 import { SpentList } from "@/components/spent-list";
 import { SummaryCard } from "@/components/summary-card";
 import { UserHeader } from "@/components/user-header";
@@ -31,6 +32,7 @@ export default function Home() {
                 <SpentList data={MOCK_CATEGORY_SPENDING}                    
                 />
             </ScrollView>
+            <NavBar/>
         </SafeAreaView>
     )
 }
